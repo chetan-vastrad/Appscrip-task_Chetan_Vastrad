@@ -1,0 +1,127 @@
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 1140px;
+  }
+  
+  /* Row */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  /* Columns */
+  [className*="col-"] {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
+  /* Responsive Columns */
+  .collg12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .collg6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .collg4 {
+    flex: 0 0 33.3333%;
+    max-width: 33.3333%;
+  }
+  
+  .collg3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .collg2 {
+    flex: 0 0 12.5%;
+    max-width: 12.5%;
+  }
+  
+  @media (max-width: 992px) {
+    .col-md-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+  .footerSection{
+    padding: 50px;
+    background-color: black;
+}
+  .footerSectionTop{
+    display: flex;
+    border-bottom: 1px solid white;
+  }
+
+.footerSection h3,p{
+    color: white;
+    padding-bottom: 20px;
+}
+.footerSection input{
+    margin: 0 10px 20px 0;
+    background: #fff;
+    border: 1px solid #eaeaea;
+    color: #454545;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.937rem;
+    font-weight: 400;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #eaeaea;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.footerSection button{
+    padding: 0.475rem 3rem;
+    background-color:#000000;   
+    color: #FFFFFF63;
+    border: 1px solid #FFFFFF63;
+    border-radius: 5px;
+}
+
+.footerSectionTop_2 div.collg12{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.footerSectionTop_2 img{
+width: 30px;
+padding-bottom: 15px;
+}
+.footerSectionTop_2 span{
+    color: white;
+    font-weight: 600;
+}
+.footerSectionTop_2 span::before{
+    content: " * ";
+}
+/* Footer Section Bottom */
+.footerSectionBottom{
+    padding-top: 50px;
+    color: white;
+    line-height: 1.;
+}
+.footerSectionBottomInner{
+    display: flex;
+}
+.footerSectionBottom ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
