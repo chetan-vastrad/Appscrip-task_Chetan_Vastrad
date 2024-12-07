@@ -1,6 +1,11 @@
+import { useState } from "react";
 import styles from "./Header.module.css";
 import Logo from "../../assets/logo.png";
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const showMenuHandelr = () =>{
+        setIsMenuOpen((pre) => !pre);
+    }
     return (
         <div>
             <div className={styles.topHeader}>
@@ -18,7 +23,10 @@ const Header = () => {
                 </div>
             </div>
             <div className={styles.middleHeader}>
-                <img src={Logo} alt="Logo" />
+                <div className={styles.mobileMenu}>
+                    <i className={"fa-solid fa-bars menuIcon"} onClick={showMenuHandelr}></i>
+                    <img src={Logo} alt="Logo" />
+                </div>
                 <h2>LOGO</h2>
                 <div className={`${styles.middleHeaderIcons}`}>
                     <i className="fa-solid fa-magnifying-glass"></i>
@@ -28,7 +36,7 @@ const Header = () => {
                     <span>ENG <i className="fa-solid fa-angle-down"></i></span>
                 </div>
             </div>
-            <div className={styles.menuBar}>
+            <div className={`${styles.menuBar} ${isMenuOpen ? styles.menuBarOpen : ""}`}>
                 <ul>
                     <li>SHOP</li>
                     <li>SKILLS</li>
