@@ -7,26 +7,26 @@ const Middle = () => {
     const recommendedShowHandler = () => {
         setIsListVisible((prevState) => !prevState);
     }
-    const hideMainFilterHandler = () =>{
+    const hideMainFilterHandler = () => {
         setMainFilterVisible((prevState) => !prevState);
     }
     return (
         <div className={styles.main}>
             <div className={styles.mobileHeaderMenu}>
                 <ul>
-                <li>Home</li>
-                <li>Shop</li>
+                    <li>Home</li>
+                    <li>Shop</li>
                 </ul>
             </div>
             <div className={styles.mainHeader}>
-                <h1>Discover our products</h1>
+                <h1>DISCOVER OUR PRODUCTS</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus est, <br />nihil nemo officiis labore atque voluptas magni voluptatibus? </p>
             </div>
             <div className={styles.filterSectionHeader}>
                 <div className={styles.filterSection}>
                     <div className={styles.innerfilterSection}>
-                        <p>3245 ITEMS</p>
-                        <h5 onClick={hideMainFilterHandler} style={{color:"gray"}}><i className={`fa-solid fa-angle-left  ${mainFilterVisible ? styles.rotate : ''}`} ></i> {mainFilterVisible ? "HIDE FILTER" : "SHOW FILTER"}</h5>
+                        <h5 className={styles.itemsLength}>3245 ITEMS</h5>
+                        <h5 onClick={hideMainFilterHandler}><i className={`fa-solid fa-angle-left  ${mainFilterVisible ? styles.rotate : ''}`} ></i> {mainFilterVisible ? "HIDE FILTER" : "SHOW FILTER"}</h5>
                     </div>
                     <div className={styles.mobileCenterBar}></div>
                     <div className={styles.recommendedSection}>
@@ -47,7 +47,7 @@ const Middle = () => {
 
                 </div>
             </div>
-            <ProductList filterShow={mainFilterVisible}/>
+            <ProductList filterShow={mainFilterVisible} />
         </div>
     )
 }

@@ -113,10 +113,10 @@ const Footer = () => {
                                 <h3>metta muse ACCEPTS</h3>
                                 <ul className={styles.paymentCard}>
                                     <li><img src={Gpay} alt="G Pay Logo" /></li>
-                                    <li><img src={Applepay} alt="G Pay Logo" /></li>
-                                    <li><img src={Paypal} alt="G Pay Logo" /></li>
-                                    <li><img src={Amex} alt="G Pay Logo" /></li>
-                                    <li><img src={Mastercard} alt="G Pay Logo" /></li>
+                                    <li><img src={Applepay} alt="Apple  Pay Logo" /></li>
+                                    <li><img src={Paypal} alt="Paypal Logo" /></li>
+                                    <li><img src={Amex} alt="Amex Pay Logo" /></li>
+                                    <li><img src={Mastercard} alt="MasterCard Logo" /></li>
                                 </ul>
                             </div>
                         </div>

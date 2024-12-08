@@ -1,9 +1,12 @@
 .main{
-    padding: 0 50px;
+    padding: 100px 50px;
 }
 .mainHeader{
-    padding-top: 50px;
+    padding-top: 80px;
     text-align: center;
+}
+.mainHeader h1{
+    font-weight: normal;
 }
 .mainHeader p{
     color: black;
@@ -11,6 +14,9 @@
 }
 .mobileHeaderMenu{
     display: none;
+}
+.innerfilterSection{
+    cursor: pointer;
 }
 .filterSectionHeader{
     position: relative;
@@ -30,6 +36,7 @@ padding-bottom: 0;
 }
 .filterSection .innerfilterSection{
     display: flex;
+    gap: 20px;
 }
 .innerfilterSection p{
     cursor: pointer;
@@ -52,6 +59,7 @@ position: absolute;
 right: 0px;
 top: 25px;
 z-index: 9999;
+border-radius: 5px;
 }
 .recommendedSection ul li{
     padding-bottom: 10px;
@@ -62,12 +70,14 @@ z-index: 9999;
 .recommendedSection i.rotated {
     transform: rotate(180deg);
   }
-
   @media (max-width: 768px) {
+    .itemsLength{
+        display: none;
+    }
     .mainHeader{
         padding: 0;
     }
-    .innerfilterSection p{
+    .innerfilterSection h5:nth-child(1){
         display: none;
     }
     .mobileCenterBar::before{
@@ -91,4 +101,13 @@ z-index: 9999;
     .mobileHeaderMenu ul li:nth-child(2){
         color: black;
     }
+    .main{
+        padding: 100px 50px 50px 50px;
+    }
   }
+  @media (max-width: 480px) {
+    .mainHeader{
+        padding: 0;
+        font-size: 11px;
+    }
+}

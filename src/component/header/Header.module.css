@@ -62,43 +62,61 @@
   }
 /* Top Header */
 .topHeader{
-    background-color: black;
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 1000;
+  padding: 10px 0;
+}
+.topHeader p{
+  padding-bottom: 0 !important;
 }
 .innerTopHeader{
     display: flex;
     color: #EB4C6B;
     align-items: baseline;
     font-weight: 400;
-    padding: 5px 0;
 }
 .innerTopHeader p{
     color:#EB4C6B;
     margin-bottom: 0;
 }
 /* Middle Header */
+.topMiddleHeader{
+  position: fixed;
+  top: 39px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  /* display: flex; */
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 999;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
 .middleHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding:20px 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
 }
 .mobileMenu i{
   display: none;
 }
 .middleHeader img{
     width: 40px;
+    cursor: pointer;
 }
-.middleHeaderIcons i{
-    margin-right: 20px;
+.middleHeaderIcons{
+    display: flex;
+    gap: 10px;
 }
 /* Menu Bar */
-.menuBar{
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-}
 .menuBar ul{
     list-style: none;
     gap: 20px;
@@ -106,7 +124,20 @@ display: flex;
 justify-content: center;
 font-weight: 600;
 }
+.mainLogo{
+  width: 40%;
+  margin-left: 100px;
+  text-align: center;
+}
 @media (max-width: 768px) {
+  .mainLogo{
+    width: 40%;
+    margin:0 25px 0 0;
+    text-align: center;
+  }
+  .middleHeader img{
+    width: 35px;
+  }
   .mobileMenu i{
     display: block;
     font-size: 30px;
@@ -122,7 +153,7 @@ font-weight: 600;
     display: none;
   } */
   .middleHeader{
-    border-bottom: 1px solid #eee;
+   padding: 0;
   }
   .middleHeaderIcons > :nth-last-child(-n+2){
     display: none;
@@ -135,7 +166,7 @@ font-weight: 600;
 }
 .menuBar {
   position: fixed;
-  top: 108;
+  top: 94px;
   left: -100%;
   width: 250px;
   height: 80%;

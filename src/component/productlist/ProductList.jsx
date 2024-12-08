@@ -3,7 +3,7 @@ import styles from "./ProductList.module.css";
 
 const ProductList = (props) => {
   console.log(props);
-  
+
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [visibleFilter, setVisibleFilter] = useState(null);
@@ -40,44 +40,43 @@ const ProductList = (props) => {
   return (
     <div className={styles.allData}>
       {props.filterShow &&
-       (
-        <div className={styles.customFilterSection}>
-        <div className={styles.customFilter}>
-          <div className={styles.selectOuterFilter}>
-            <input type="checkbox" name="Select Custom" />
-            <h5> CUSTOMIZABLE</h5>
-          </div>
-          {filters.map((filter, index) => (
-            <div key={index} className={styles.selectFilter}>
-              <div
-                className={styles.selectInnerFilter}
-                onClick={() => toggleFilterVisibility(index)}
-              >
-                <h5>{filter.title}</h5>
-                <i
-                  className={`fa-solid ${
-                    visibleFilter === index ? "fa-angle-up" : "fa-angle-down"
-                  }`}
-                ></i>
+        (
+          <div className={styles.customFilterSection}>
+            <div className={styles.customFilter}>
+              <div className={styles.selectOuterFilter}>
+                <input type="checkbox" name="Select Custom" />
+                <h5> CUSTOMIZABLE</h5>
               </div>
-              {visibleFilter === index && (
-                <div className={styles.filterList}>
-                  <ul>
-                    <li><strong><a>All</a></strong></li>
-                    <li><a>Unselectall</a></li>
-                    {filter.options.map((option, idx) => (
-                      <li key={idx}>
-                        <input type="checkbox" /> {option}
-                      </li>
-                    ))}
-                  </ul>
+              {filters.map((filter, index) => (
+                <div key={index} className={styles.selectFilter}>
+                  <div
+                    className={styles.selectInnerFilter}
+                    onClick={() => toggleFilterVisibility(index)}
+                  >
+                    <h5>{filter.title}</h5>
+                    <i
+                      className={`fa-solid ${visibleFilter === index ? "fa-angle-up" : "fa-angle-down"
+                        }`}
+                    ></i>
+                  </div>
+                  {visibleFilter === index && (
+                    <div className={styles.filterList}>
+                      <ul>
+                        <li><strong><a>All</a></strong></li>
+                        <li><a>Unselectall</a></li>
+                        {filter.options.map((option, idx) => (
+                          <li key={idx}>
+                            <input type="checkbox" /> {option}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
-              )}
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-       )
+          </div>
+        )
       }
 
       <div className={styles.productList}>
@@ -89,7 +88,7 @@ const ProductList = (props) => {
               className={styles.productImage}
             />
             <p>${product.price}</p>
-            <h3>{product.title}</h3>
+            <h4>{product.title}</h4>
           </div>
         ))}
       </div>

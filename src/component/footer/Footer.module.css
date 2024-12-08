@@ -165,7 +165,9 @@ border-radius: 5px;
 .paymentCard li img{
   width: 35px;
 }
-
+.footerHeader i {
+  display: none;
+}
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .footerSection{
@@ -251,4 +253,8 @@ margin-bottom: 10px !important;
   .collg4:last-child{
     border-bottom: none;
   }
+  .footerHeader i {
+    display: block;
+}
+
 }
